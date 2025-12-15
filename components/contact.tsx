@@ -64,7 +64,7 @@ export default function Contact() {
   }
 
   const handlePhoneClick = () => {
-    window.location.href = "https://wa.me/212652768993?text=Bonjour%20Je%20veux%20plus%20d'informations"
+    window.location.href = "https://wa.me/212719144144?text=Bonjour%20Je%20veux%20plus%20d'informations"
   }
 
   const handleLocationClick = () => {
