@@ -46,7 +46,7 @@ export default function Footer() {
   }
 
   const handlePhoneClick = () => {
-    window.location.href = "tel:+212652768993"
+    window.location.href = "tel:+212719144144"
   }
 
   const handleEmailClick = () => {
