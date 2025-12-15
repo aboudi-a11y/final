@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function Hero() {
   const handleStartNow = () => {
-    const phoneNumber = "212652768993"
+    const phoneNumber = "212719144144"
     const message = "Bonjour, j'aimerais commencer maintenant avec vos services."
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
