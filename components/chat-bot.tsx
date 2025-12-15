@@ -504,10 +504,10 @@ Quel domaine vous intéresse le plus ?`,
   const handleContactAction = (action: string) => {
     switch (action) {
       case "call":
-        window.location.href = "tel:+212652768993"
+        window.location.href = "tel:+212719144144"
         break
       case "whatsapp":
-        window.location.href = "https://wa.me/212652768993?text=Bonjour%20Prestigia%20Agency"
+        window.location.href = "https://wa.me/212719144144?text=Bonjour%20Prestigia%20Agency"
         break
       case "email":
         window.location.href =
