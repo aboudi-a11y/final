@@ -269,7 +269,7 @@ export default function PersonalBrandingPage() {
               <div className="mt-4 space-y-2">
                 <p className="text-sm text-accent font-semibold">💰 Réductions disponibles :</p>
                 <p className="text-sm text-red-500">
-                  15-19 vidéos : -100 DH par vidéo | 20+ vidéos : -150 DH par vidéo
+                  15-19 vidéos : -50 DH par vidéo | 20+ vidéos : -100 DH par vidéo
                 </p>
               </div>
             </div>
@@ -349,7 +349,7 @@ export default function PersonalBrandingPage() {
                           {Math.round(pricePerUnit)} DH × {quantity} vidéos
                           {hasDiscount && (
                             <span className="ml-2 text-accent font-semibold">
-                              ({quantity >= 20 ? "-150" : "-100"} DH/vidéo)
+                              ({quantity >= 20 ? "-100" : "-50"} DH/vidéo)
                             </span>
                           )}
                         </div>
