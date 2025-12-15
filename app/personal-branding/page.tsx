@@ -24,13 +24,13 @@ export default function PersonalBrandingPage() {
   const calculatePrice = (basePrice: number, quantity: number) => {
     let pricePerUnit = basePrice
 
-    // Réduction de 150 DH pour 20+ vidéos
+    // Réduction de 100 DH pour 20+ vidéos
     if (quantity >= 20) {
-      pricePerUnit = basePrice - 150
-    }
-    // Réduction de 100 DH pour 15+ vidéos
-    else if (quantity >= 15) {
       pricePerUnit = basePrice - 100
+    }
+    // Réduction de 50 DH pour 15+ vidéos
+    else if (quantity >= 15) {
+      pricePerUnit = basePrice - 50
     }
 
     return pricePerUnit * quantity
