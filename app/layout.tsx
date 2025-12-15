@@ -128,7 +128,7 @@ export default function RootLayout({
         name: "Prestigia Agency",
         description: "Agence de marketing digital spécialisée en SEO, branding et développement web à Casablanca",
         url: "https://prestigia-agency.com",
-        telephone: "+212652768993",
+        telephone: "+212719144144",
         email: "contact@prestigia-agency.com",
         address: {
           "@type": "PostalAddress",
