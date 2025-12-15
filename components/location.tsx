@@ -56,7 +56,7 @@ export default function Location() {
             </div>
 
             <div
-              onClick={() => window.open("https://wa.me/212652768993", "_blank")}
+              onClick={() => window.open("https://wa.me/212719144144", "_blank")}
               className="bg-card border border-accent/10 rounded-xl p-6 hover:border-accent/50 transition-all duration-300 cursor-pointer hover:bg-card/80"
             >
               <div className="flex items-start gap-4">
