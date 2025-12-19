@@ -82,23 +82,25 @@ export default function AdminPage() {
         <div className="flex gap-4 mb-8 border-b border-border">
         <button
   onClick={() => {
+    // Meta conversion event
     event("Lead", {
       content_name: "Devis Tab",
       source: "navigation",
-    });
+    }};
 
+    // Comportement existant
     setActiveTab("quotes");
   }}
-  className={[
-    "px-4 py-3 font-semibold transition-colors",
+  className={`px-4 py-3 font-semibold transition-colors ${
     activeTab === "quotes"
       ? "text-primary border-b-2 border-primary"
-      : "text-muted-foreground hover:text-foreground",
-  ].join(" ")}
+      : "text-muted-foreground hover:text-foreground"
+  }`}
 >
   <FileText className="inline-block w-5 h-5 mr-2" />
   Demandes de Devis ({quotes.length})
 </button>
+
 
 
             onClick={() => setActiveTab("messages")}
