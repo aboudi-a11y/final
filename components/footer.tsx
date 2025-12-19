@@ -5,6 +5,8 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import QuoteModal from "./quote-modal"
+import { event } from '@/lib/fpixel'
+import { useState } from 'react'
 
 export default function Footer() {
   const [showQuoteModal, setShowQuoteModal] = useState(false)
@@ -195,13 +197,15 @@ export default function Footer() {
               <h3 className="font-bold text-foreground text-lg">Commencer</h3>
               <p className="text-muted-foreground text-sm flex-grow">Prêt à transformer votre présence digitale?</p>
               <button
-                onClick={() => setShowQuoteModal(true)}
-                className="bg-accent text-background px-6 py-3 rounded-full hover:bg-accent/90 transition-all duration-300 font-semibold hover:scale-105 w-full"
-              >
-                Demander un Devis
-              </button>
-            </div>
-          </div>
+        onClick={() => {
+          setShowQuoteModal(true)
+          // Déclenchement de l'événement Meta Pixel Lead
+          event('Lead', { content_name: 'Devis Footer', source: 'footer_button' })
+        }}
+        className="bg-accent text-background px-6 py-3 rounded-full hover:bg-accent/90 transition-all duration-300 font-semibold hover:scale-105 w-full"
+      >
+        Demander un Devis
+      </button>
 
           <div className="border-t border-border my-8"></div>
 
