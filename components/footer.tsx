@@ -206,7 +206,8 @@ export default function Footer() {
       >
         Demander un Devis
       </button>
-
+ </div>
+          </div>
           <div className="border-t border-border my-8"></div>
 
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center sm:items-center sm:justify-between">
