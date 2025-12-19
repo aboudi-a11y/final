@@ -86,7 +86,7 @@ export default function AdminPage() {
     event("Lead", {
       content_name: "Devis Tab",
       source: "navigation",
-    }};
+    });
 
     // Comportement existant
     setActiveTab("quotes");
@@ -101,7 +101,7 @@ export default function AdminPage() {
   Demandes de Devis ({quotes.length})
 </button>
 
-
+<button
 
             onClick={() => setActiveTab("messages")}
             className={`px-4 py-3 font-semibold transition-colors ${
