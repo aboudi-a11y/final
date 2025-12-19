@@ -174,12 +174,18 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
           )}
 
           <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-accent text-background px-6 py-3 rounded-full hover:bg-accent/90 transition-all duration-300 font-semibold hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {loading ? "Envoi..." : "Envoyer la Demande"}
-          </button>
+  type="submit"
+  disabled={loading}
+  className="w-full bg-accent text-background px-6 py-3 rounded-full hover:bg-accent/90 transition-all duration-300 font-semibold hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+  onClick={() => {
+    // Envoie de l'événement "Lead" à ton pixel Meta
+    if (window.fbq) {
+      window.fbq('track', 'Lead');
+    }
+  }}
+>
+  {loading ? "Envoi..." : "Envoyer la Demande"}
+</button>
         </form>
       </div>
     </div>
