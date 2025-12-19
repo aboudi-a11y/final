@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import Script from "next/script"
 import { SkipToContent } from "@/components/accessibility-skip-link"
+import FacebookPageView from "@/components/FacebookPageView";
 
 const _geist = Geist({ subsets: ["latin"], display: "swap", preload: true })
 const _geistMono = Geist_Mono({ subsets: ["latin"], display: "swap" })
@@ -260,9 +261,14 @@ export default function RootLayout({
       </head>
 
       <body className="font-sans antialiased">
-        <SkipToContent />
-        <main id="main-content">{children}</main>
-      </body>
+  <SkipToContent />
+
+  {/* Meta Pixel PageView on route change */}
+  <FacebookPageView />
+
+  <main id="main-content">{children}</main>
+</body>
+
     </html>
   )
 }
