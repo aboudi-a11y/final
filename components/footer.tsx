@@ -6,7 +6,6 @@ import Image from "next/image"
 import Link from "next/link"
 import QuoteModal from "./quote-modal"
 import { event } from '@/lib/fpixel'
-import { useState } from 'react'
 
 export default function Footer() {
   const [showQuoteModal, setShowQuoteModal] = useState(false)
