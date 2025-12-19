@@ -5,6 +5,7 @@ import "./globals.css"
 import Script from "next/script"
 import { SkipToContent } from "@/components/accessibility-skip-link"
 import FacebookPageView from "@/components/FacebookPageView";
+import { initFacebookPixel, event } from "@/lib/fpixel"
 
 const _geist = Geist({ subsets: ["latin"], display: "swap", preload: true })
 const _geistMono = Geist_Mono({ subsets: ["latin"], display: "swap" })
@@ -115,11 +116,11 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    // Initialiser Meta Pixel une seule fois
+    initFacebookPixel()
+  }, [])
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -260,15 +261,22 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
 
-      <body className="font-sans antialiased">
-  <SkipToContent />
+     <body className="font-sans antialiased">
+        <SkipToContent />
 
-  {/* Meta Pixel PageView on route change */}
-  <FacebookPageView />
+        {/* Meta Pixel PageView automatique */}
+        <Script
+          id="facebook-pageview"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if(window.fbq){ fbq('track', 'PageView'); }
+            `,
+          }}
+        />
 
-  <main id="main-content">{children}</main>
-</body>
-
+        <main id="main-content">{children}</main>
+      </body>
     </html>
   )
 }
