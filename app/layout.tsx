@@ -97,12 +97,13 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-code",
-    yandex: "yandex-verification-code",
-    other: {
-      "msvalidate.01": "ms-verification-code",
-    },
+  google: "google-site-verification-code",
+  yandex: "yandex-verification-code",
+  other: {
+    "msvalidate.01": "ms-verification-code",
+    "facebook-domain-verification": "ea8cv9si66h2wvk857cg625dsmpkc9",
   },
+},
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
